@@ -67,16 +67,24 @@ public class Main {
         int minutesArr = in.nextInt();
         System.out.println(" Travel time in minutes is " + travelTime(hoursDep, minutesDep, hoursArr, minutesArr));*/
 
-        System.out.println("Input time inhours, minutes and seconds: ");
+        /*System.out.println("Input time in hours, minutes and seconds: ");
         int hours = in.nextInt();
         int minutes = in.nextInt();
         int seconds = in.nextInt();
-        System.out.println(timeCalc(hours, minutes, seconds) + " second have passed since the beginning of the day");
+        System.out.println(timeCalc(hours, minutes, seconds) + " second have passed since the beginning of the day");*/
+
+        System.out.println("Input number: ");
+        int numb = in.nextInt();
+        System.out.println("Reversed number is: " + reverseNumb(numb));
     }
 
-    public static int timeCalc (int h, int m, int s){
-        return (h * 60 * 60 + m * 60 + s);
+    public static int reverseNumb (int a){
+        return (100 * (a % 10) + 10 * ((a / 10) % 10) + (a / 100));
     }
+
+    /*public static int timeCalc (int h, int m, int s){
+        return (h * 60 * 60 + m * 60 + s);
+    }*/
 
    /* public static int thirdDigit (int a) {
         int result = a;
