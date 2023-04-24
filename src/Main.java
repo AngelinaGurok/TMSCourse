@@ -11,6 +11,13 @@
  *
  * Вычисление квадрата целого числа
  */
+/**
+ * Простая (2 балла)
+ *
+ * Поезд вышел со станции отправления в h1 часов m1 минут (например в 9:25) и
+ * прибыл на станцию назначения в h2 часов m2 минут того же дня (например в 13:01).
+ * Определите время поезда в пути в минутах (в данном случае 216).
+ */
 import java.util.Scanner;
 public class Main {
 
@@ -31,10 +38,22 @@ public class Main {
         int numb = in.nextInt();
         System.out.println(" The square of number " + numb + " is equal to " + sqrtInt(numb));*/
 
-        System.out.println("Input number: ");
+        /*System.out.println("Input number: ");
         double numb = in.nextDouble();
-        System.out.println(" The square of number " + numb + " is equal to " + sqrtDouble(numb));
+        System.out.println(" The square of number " + numb + " is equal to " + sqrtDouble(numb));*/
 
+        System.out.println("Input train departure time in hours and minutes: ");
+        int hoursDep = in.nextInt();
+        int minutesDep = in.nextInt();
+        System.out.println("Input train arrival time in hours and minutes: ");
+        int hoursArr = in.nextInt();
+        int minutesArr = in.nextInt();
+        System.out.println(" Travel time in minutes is " + travelTime(hoursDep, minutesDep, hoursArr, minutesArr));
+
+    }
+
+    public static int travelTime (int hDep, int mDep, int hArr, int mArr){
+        return (mArr + (60 - mDep) + (hArr - hDep - 1) * 60);
     }
    /* public static float convertLength(int a, int b, int c, float convert){
         return  (a * 48 + b * 16 + c) * convert;
