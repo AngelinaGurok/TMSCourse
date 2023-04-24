@@ -18,6 +18,14 @@
  * прибыл на станцию назначения в h2 часов m2 минут того же дня (например в 13:01).
  * Определите время поезда в пути в минутах (в данном случае 216).
  */
+
+/**
+ * Простая (2 балла)
+ *
+ * Пользователь задает целое число, больше или равно 100 (например, 3801).
+ * Определить третью цифру справа в этом числе (в данном случае 8).
+ */
+
 import java.util.Scanner;
 public class Main {
 
@@ -42,28 +50,39 @@ public class Main {
         double numb = in.nextDouble();
         System.out.println(" The square of number " + numb + " is equal to " + sqrtDouble(numb));*/
 
-        System.out.println("Input train departure time in hours and minutes: ");
+/*        System.out.println("Input train departure time in hours and minutes: ");
         int hoursDep = in.nextInt();
         int minutesDep = in.nextInt();
         System.out.println("Input train arrival time in hours and minutes: ");
         int hoursArr = in.nextInt();
         int minutesArr = in.nextInt();
-        System.out.println(" Travel time in minutes is " + travelTime(hoursDep, minutesDep, hoursArr, minutesArr));
-
+        System.out.println(" Travel time in minutes is " + travelTime(hoursDep, minutesDep, hoursArr, minutesArr));*/
+        System.out.println("Input number: ");
+        int numb = in.nextInt();
+        System.out.println("The third number of " + numb + " is: " + thirdDigit(numb));
     }
 
-    public static int travelTime (int hDep, int mDep, int hArr, int mArr){
+    public static int thirdDigit (int a) {
+        int result = a;
+        do{
+            result = result / 10;
+        }while(result > 100);
+        result = result % 10;
+        return result;
+    }
+
+    /*public static int travelTime (int hDep, int mDep, int hArr, int mArr){
         return (mArr + (60 - mDep) + (hArr - hDep - 1) * 60);
-    }
+    }*/
    /* public static float convertLength(int a, int b, int c, float convert){
         return  (a * 48 + b * 16 + c) * convert;
     }*/
-    public static int sqrtInt (int a){
+   /* public static int sqrtInt (int a){
         return a * a;
-    }
+    }*/
 
-    public static double sqrtDouble (double a) {
+ /*   public static double sqrtDouble (double a) {
         return a * a;
-    }
+    }*/
 }
 
